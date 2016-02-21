@@ -1,0 +1,28 @@
+//
+// Prefix header for all source files of the 'ILoveAssistant' target in the 'ILoveAssistant' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#import "AppStatusCenter.h"
+#import "Define.h"
+#import "CocoaAsyncSocket.h"
+#import <UIKit/UIKit.h>
+#import "DeviceInfoCenter.h"
+#import "Cencryp.h"
+//#import "Encryption.h"
+#import "Utils.h"
+#import "UIFactory.h"
+//#import "Source/pop/POP.h"
+//#import "BaseTextField.h"
+#import "BaseView.h"
+#import "SocketHelper.h"
+#import "QCheckBox.h"
+#import "UIFactory.h"
+
+#import <mach-o/dyld.h>// _dyld_get_image_vmaddr_slide(0) 获取到做任意偏移
+
+#import <SpringBoardServices/SpringBoardServices.h>
+
+
+#endif

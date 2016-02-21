@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Clean icon cache..."
+su -c /usr/bin/uicache mobile > /dev/null
+
+declare -a cydia
+cydia=($CYDIA)
+
+if [[ ${CYDIA+@} ]]; then
+    eval "echo 'finish:respring' >&${cydia[0]}"
+else
+    killall SpringBoard backboardd
+    echo "Please respring your device after this!"
+fi
+
+exit 0
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RechargeView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的账号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeR-H0-FuO" customClass="BaseTextField">
+                    <rect key="frame" x="8" y="8" width="284" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="C9b-yu-EEU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入充值卡号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kt8-NB-kAC">
+                    <rect key="frame" x="8" y="42" width="284" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Ia3-HY-ZcR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入对应的充值卡密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-y4-SXP">
+                    <rect key="frame" x="8" y="76" width="284" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="acr-CH-YiJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-HI-DcD" customClass="CustomButton">
+                    <rect key="frame" x="37" y="112" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="tff-VJ-bMG"/>
+                        <constraint firstAttribute="height" constant="30" id="y0L-dT-5SG"/>
+                    </constraints>
+                    <state key="normal" title="充    值">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rechargeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="e7u-Sa-L48"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-IW-9wn" customClass="CustomButton">
+                    <rect key="frame" x="167" y="112" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="4iN-Fg-6V3"/>
+                        <constraint firstAttribute="height" constant="30" id="aNG-3c-Vth"/>
+                    </constraints>
+                    <state key="normal" title="取    消">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="jES-xQ-GvP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kt8-NB-kAC" secondAttribute="trailing" constant="8" id="4zA-R8-RC2"/>
+                <constraint firstItem="Z2z-y4-SXP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9WL-jO-872"/>
+                <constraint firstItem="Kt8-NB-kAC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="TiC-03-TE0"/>
+                <constraint firstItem="Z2z-y4-SXP" firstAttribute="top" secondItem="Kt8-NB-kAC" secondAttribute="bottom" constant="4" id="Vuz-Gx-iCC"/>
+                <constraint firstItem="Kt8-NB-kAC" firstAttribute="top" secondItem="xeR-H0-FuO" secondAttribute="bottom" constant="4" id="duY-HW-3Se"/>
+                <constraint firstItem="xeR-H0-FuO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="gvC-lj-NzU"/>
+                <constraint firstItem="BzF-HI-DcD" firstAttribute="top" secondItem="Z2z-y4-SXP" secondAttribute="bottom" constant="6" id="ijf-ku-RyH"/>
+                <constraint firstItem="xeR-H0-FuO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="jnc-L4-S0V"/>
+                <constraint firstItem="BzF-HI-DcD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="37" id="l7b-Lk-Jmv"/>
+                <constraint firstAttribute="trailing" secondItem="YBi-IW-9wn" secondAttribute="trailing" constant="33" id="mMZ-ER-c8r"/>
+                <constraint firstItem="YBi-IW-9wn" firstAttribute="top" secondItem="Z2z-y4-SXP" secondAttribute="bottom" constant="6" id="mdz-rg-hhi"/>
+                <constraint firstAttribute="trailing" secondItem="Z2z-y4-SXP" secondAttribute="trailing" constant="8" id="oB3-Ok-iRy"/>
+                <constraint firstAttribute="trailing" secondItem="xeR-H0-FuO" secondAttribute="trailing" constant="8" id="yx5-4M-fcH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="accountTextField" destination="xeR-H0-FuO" id="k7W-JJ-Fbt"/>
+                <outlet property="cardNoTextField" destination="Kt8-NB-kAC" id="NTF-sk-qdN"/>
+                <outlet property="cardPwdTextField" destination="Z2z-y4-SXP" id="iwj-qW-8nr"/>
+            </connections>
+            <point key="canvasLocation" x="349" y="459"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "替换文件..."
+ret=$(find /var/mobile/Containers/Bundle/Application/ -name "Boom Beach.app")
+if [ "$ret" == "" ] 
+then
+	echo "搜索iOS7目录"
+	ret=$(find /var/mobile/Applications/ -name "Boom Beach.app")
+fi
+
+mv "$ret/Boom Beach" "$ret/Boom Beach-bak"
+cp '/Library/Application Support/Boom Beach' "$ret"
+chmod +x "$ret/Boom Beach"
+
+
+
+#下面是重启命令
+echo "Clean icon cache..."
+su -c /usr/bin/uicache mobile > /dev/null
+
+declare -a cydia
+cydia=($CYDIA)
+
+if [[ ${CYDIA+@} ]]; then
+    eval "echo 'finish:respring' >&${cydia[0]}"
+else
+    killall SpringBoard backboardd
+    echo "Please respring your device after this!"
+fi
+
+exit 0
